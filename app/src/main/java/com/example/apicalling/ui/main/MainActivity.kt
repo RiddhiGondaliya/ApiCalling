@@ -13,9 +13,14 @@ class MainActivity : AppCompatActivity(), MainView {
         presenter = MainPresenter()
         presenter.attachView(this)
         presenter.getTodoDetail(1)
+        presenter.getbuttonText(2)
     }
 
     override fun displayTitle(title: String) {
         tvTitle.text = title
+    }
+
+    override fun buttonText(btn: String) {
+        btv.text = btn
     }
 }
